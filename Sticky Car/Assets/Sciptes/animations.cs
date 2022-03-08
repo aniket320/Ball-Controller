@@ -36,7 +36,7 @@ public class animations : MonoBehaviour
 
     IEnumerator Idle()
     {
-        yield return new WaitForSeconds(0.19f);
+        yield return new WaitForSeconds(0.37f);
         RefreshPos();
     }
 

@@ -9,7 +9,7 @@ public class position : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.LookAt(end);
+        //transform.LookAt(end);
     }
 
     // Update is called once per frame

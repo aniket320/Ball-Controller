@@ -9,29 +9,39 @@ public class onoffanimator : MonoBehaviour
 
 
     Quaternion targetrot;
+
+    public bool activerag;
     // Start is called before the first frame update
     void Start()
     {
         this.copy = this.GetComponent<ConfigurableJoint>();
         this.targetrot = this.target.transform.localRotation;
-        JointDrive jointDriveX = copy.angularXDrive;
-        jointDriveX.positionSpring = .5f;
-        copy.angularXDrive = jointDriveX;
-
-        JointDrive jointDriveYZ = copy.angularYZDrive;
-        jointDriveYZ.positionSpring = .5f;
-        copy.angularXDrive = jointDriveYZ;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (activerag == true)
+        {
+            JointDrive jointDriveX = copy.angularXDrive;
+            jointDriveX.positionSpring = 1f;
+            copy.angularXDrive = jointDriveX;
+
+            JointDrive jointDriveYZ = copy.angularYZDrive;
+            jointDriveYZ.positionSpring = 1f;
+            copy.angularXDrive = jointDriveYZ;
+           
+        }
+       
     }
 
     private void FixedUpdate()
     {
-        //this.copy.targetRotation = copyrot();
+        if (activerag == false)
+        {
+            this.copy.targetRotation = copyrot();
+        }
     }
 
     private Quaternion copyrot()

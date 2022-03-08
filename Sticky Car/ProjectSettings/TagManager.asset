@@ -13,6 +13,7 @@ TagManager:
   - bh
   - d
   - Enemy
+  - hands
   layers:
   - Default
   - TransparentFX
