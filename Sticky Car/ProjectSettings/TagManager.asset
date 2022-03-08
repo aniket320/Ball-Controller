@@ -12,6 +12,7 @@ TagManager:
   - bot
   - bh
   - d
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - ground
   - p1
   - p2
-  - 
+  - character
   - 
   - 
   - 

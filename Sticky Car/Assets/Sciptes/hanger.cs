@@ -25,7 +25,7 @@ public class hanger : MonoBehaviour
         {
             var ob = collision.gameObject.transform;
             ob.parent = transform;
-            StartCoroutine(stickt());
+            //StartCoroutine(stickt());
         }
        
 

@@ -14,6 +14,13 @@ public class onoffanimator : MonoBehaviour
     {
         this.copy = this.GetComponent<ConfigurableJoint>();
         this.targetrot = this.target.transform.localRotation;
+        JointDrive jointDriveX = copy.angularXDrive;
+        jointDriveX.positionSpring = .5f;
+        copy.angularXDrive = jointDriveX;
+
+        JointDrive jointDriveYZ = copy.angularYZDrive;
+        jointDriveYZ.positionSpring = .5f;
+        copy.angularXDrive = jointDriveYZ;
     }
 
     // Update is called once per frame
@@ -24,7 +31,7 @@ public class onoffanimator : MonoBehaviour
 
     private void FixedUpdate()
     {
-        this.copy.targetRotation = copyrot();
+        //this.copy.targetRotation = copyrot();
     }
 
     private Quaternion copyrot()
